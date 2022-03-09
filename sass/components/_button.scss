@@ -1,0 +1,56 @@
+.btn {
+    &:link,
+    &:visited {
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 1rem 2.25rem;
+      display: inline-block;
+      transition: all 0.2s;
+      border-radius: 7rem;
+      position: relative;
+    }
+
+    &:hover {
+      transform: translateY(-0.5rem);
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      box-shadow: 0px 10px 20px rgba($color-black, 0.2);
+
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      transform: translateY(-0.2rem);
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      box-shadow: 0px 5px 10px rgba($color-black, 0.2);
+    }
+
+    &-white {
+      background-color: $color-white;
+      color: $color-grey-dark;
+      &::after {
+        background-color: $color-white;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      border-radius: 7rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      top: 0;
+      z-index: -1;
+      transition: all 0.4s;
+    }
+
+    &-animated {
+      animation: moveInBottom 1.5s ease-in-out;
+      animation-fill-mode: backwards;
+    }
+  }

@@ -1,0 +1,15 @@
+{
+  "name": "natours_landing",
+  "version": "1.0.0",
+  "description": "Landing Page For Natours ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "osmanoztuzel",
+  "license": "ISC",
+  "devDependencies": {
+    "node": "^17.4.0",
+    "sass": "^1.49.7"
+  }
+}
